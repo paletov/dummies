@@ -4,12 +4,15 @@
 <script src="../../Content/js/jquery.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
+        idNumber = 1;
         $(".addNewCourse").click(function () {
             var coursesDiv = document.getElementById("courses");
             var newDiv = document.createElement("div");
             var newSpan = document.createElement("span");
             newSpan.innerHTML = "Курс : ";
             var newSelect = document.createElement("select");
+            newSelect.setAttribute("id", "select" + idNumber);
+            idNumber++;
             var newOption = new Option("JavaEE", "JavaEE");
             newSelect.appendChild(newOption);
             newOption = new Option("Java", "Java");
@@ -22,6 +25,19 @@
             newDiv.appendChild(newSpan);
             coursesDiv.appendChild(newDiv);
         });
+
+        $(".find").click(function () {
+            if (idNumber > 1) {
+                var value = "";
+                for (var i = 0; i < idNumber; i++) {
+                    value += $("#select" + i).val();
+                }
+                if (value == "JavaEEJava" || value == "JavaJavaEE") {
+                    alert(value);
+                }
+            }
+            else alert($("#select0").val());
+        });
     });
 </script>
 <div class="student-profile-info">
@@ -33,9 +49,9 @@
     </div>
     <br />
     <div id="courses">
-        <div>
+        <div class="selectDiv0">
         <span>Курс :
-            <select>
+            <select id="select0">
                 <option value="JavaEE">JavaEE</option>
                 <option value="Java">Java</option>
                 <option value="C++">C++</option>
