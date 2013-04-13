@@ -67,9 +67,11 @@ ol
 ol li
 { margin: 0 0 11px 0;}
 
-#main, #header, #banner, #menubar, #site_content, #footer, #content_grey
-{ margin-left: auto; 
-  margin-right: auto;}
+#main, #header, #menubar, #banner, #site_content, #footer, #content_grey
+{ 
+  margin-left: auto; 
+  margin-right: auto;
+}
 
 #main
 { background: transparent;}
@@ -101,7 +103,8 @@ ol li
   -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
   -moz-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
-  } 
+  margin: 12px auto;
+} 
   
 #welcome
 { width: 880px;
