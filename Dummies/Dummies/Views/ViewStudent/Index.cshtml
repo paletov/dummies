@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Dummies.Models.Student>
+
+<h2 class="StudentsHeader">Students</h2>
+
+<div>
+    @{
+        var grid = new WebGrid(Model, defaultSort: "Name");
+    }
+
+    @grid.GetHtml(columns:grid.Columns(
+    grid.Column(
+        "Name",
+        format: @<text>@Html.ActionLink((string)item.Name, "ShowDetails", new { name = item.Name })</text>
+    )))
+</div>
+
+<div id="StudentDetailsPartial">
+
+</div>
