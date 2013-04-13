@@ -14,21 +14,21 @@ namespace Dummies.Models
         public DbSet<Course> Courses { get; set; }
 		public DbSet<Teacher> Teachers { get; set; }
 		public DbSet<Skill> Skills { get; set; }
-        public DbSet<BachelorProgramme> BachelorProgrammes { get; set; }
-        public DbSet<Semester> Semesters { get; set; }
+		public DbSet<BachelorProgramme> BachelorProgrammes { get; set; }
+		public DbSet<Semester> Semesters { get; set; }
 		public DbSet<StudentCourse> StudentCourseRelations { get; set; }
 
 		public DummiesContext()
-            : base("DefaultConnection")
-        {
-            Configuration.ProxyCreationEnabled = false;
-        }
+			: base("DefaultConnection")
+		{
+			Configuration.ProxyCreationEnabled = false;
+		}
 
-        //http://www.codeproject.com/Articles/234606/Creating-a-Many-To-Many-Mapping-Using-Code-First
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
-            modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
+		//http://www.codeproject.com/Articles/234606/Creating-a-Many-To-Many-Mapping-Using-Code-First
+		protected override void OnModelCreating(DbModelBuilder modelBuilder)
+		{
+			modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+			modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
 
 			//modelBuilder.Entity<Meeting>()
 			//               .HasMany<Contact>(m => m.Contacts)
@@ -39,6 +39,6 @@ namespace Dummies.Models
 			//                   x.MapRightKey("MeetingId");
 			//                   x.ToTable("ContactsMeetings");
 			//               });
-        }
+		}
 	}
 }
