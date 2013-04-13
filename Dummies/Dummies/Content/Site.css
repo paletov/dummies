@@ -511,6 +511,20 @@ ul img {
   box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
 }
 
+.rating-plus 
+{
+     text-indent: -119988px;
+     background-image: url("images/green-plus-sign-md.png");
+     height: 21px;
+     width: 21px;
+     position: relative;
+}
+
+.rating-plus:hover
+{
+    background-image: url("images/green-plus-sign-md-hover.png");
+}
+
 /* login
 ----------------------------------------------------------*/
 #login {
