@@ -427,6 +427,90 @@ ul img {
     float: right;
 }
 
+/* user profile 
+--------------------------------------------------------------------------------
+*/
+
+.student-profile-info
+{
+  list-style: none;
+  width: 680px;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  margin-top: 20px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
+}
+
+.student-profile-info .student-profile-picture 
+{
+    position: relative;
+    z-index: 1;
+    background: #f4f4f4;
+    float: left;
+    width: 200px;
+    height: 200px;
+    line-height: 199px;
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.student-profile-info .student-profile-overview
+{
+    position: relative;
+    z-index: 5;
+    float: right;
+    width: 405px;
+    word-wrap: break-word;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+
+.student-profile-info .student-profile-content
+{
+    min-height: 149px;
+    height: auto;
+    _height: 149px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+.student-profile-subjects
+{
+  list-style: none;
+  width: 680px;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  margin-top: 20px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
+}
+
+.student-profile-skills
+{
+  list-style: none;
+  width: 680px;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  margin-top: 20px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
+}
+
 /* login
 ----------------------------------------------------------*/
 #login {

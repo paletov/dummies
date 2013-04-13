@@ -29,7 +29,7 @@
             <div id="menubar">
                <ul id="menu">
                     <li>@Html.ActionLink("Начало", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Профил", "About", "Home")</li>
+                    <li>@Html.ActionLink("Профил", "Index", "Student")</li>
                     <li>@Html.ActionLink("Взети Предмети", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Любими предмети", "Index", "Home")</li>
                     <li>@Html.ActionLink("Оферти", "About", "Home")</li>
@@ -70,7 +70,27 @@
                 <h3>Септември 2013</h3>
                 <p><li><a href="">Свободно място за QA в Astea</a></li></p>         
 		      </div><!--close sidebar_item--> 
-            </div><!--close sidebar-->  		
+            </div><!--close sidebar-->
+            		    <div class="sidebar">
+              <div class="sidebar_item">
+                <h2>Най - търсени курсове</h2>
+                <h3>Септември 2013</h3>
+                <p><li><a href="">Juniour C гейм разработчик</a></li></p>        
+		      </div><!--close sidebar_item--> 
+            </div><!--close sidebar-->
+		    <div class="sidebar">
+              <div class="sidebar_item">
+                <h3>Септември 2013</h3>
+                <p><li><a href="">Стажант в Google</a></li></p>         
+		      </div><!--close sidebar_item--> 
+            </div><!--close sidebar-->  
+		    <div class="sidebar">
+              <div class="sidebar_item">
+                <h3>Септември 2013</h3>
+                <p><li><a href="">Свободно място за QA в Astea</a></li></p>         
+		      </div><!--close sidebar_item--> 
+            </div><!--close sidebar-->
+              		
         </div><!--close sidebar_container-->
             @RenderSection("featured", required: false)
             <section class="content-wrapper main-content clear-fix">
