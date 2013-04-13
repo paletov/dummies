@@ -7,11 +7,14 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Dummies.Models
 {
-	[Table("Course")]
+	[Table("Skill")]
 	public class Skill
 	{
 		[Key]
 		[DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
-		public int Id { get; set; }
+		public int SkillId { get; set; }
+
+		[StringLength(255)]
+		public string Name { get; set; }
 	}
 }

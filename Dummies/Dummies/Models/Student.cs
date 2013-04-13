@@ -7,27 +7,37 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Dummies.Models
 {
-	[Table("Course")]
+	[Table("Student")]
 	public class Student
 	{
 		[Key]
 		[DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
 		public int Id { get; set; }
 
-		[Key]
 		public int SyncId { get; set; }
 
-		[StringLength(128)]
+		public int FacultyNumber { get; set; }
+
+		[StringLength(127)]
 		public string Name { get; set; }
 
-		public int CourseId { get; set; }
+		[StringLength(255)]
+		[DataType(DataType.EmailAddress)]
+		public string Email { get; set; }
 
-		[ForeignKey("CourseId")]
-		public Course Course { get; set; }
+		public int SemesterId { get; set; }
+
+		[ForeignKey("SemesterId")]
+		public Semester Semester { get; set; }
 
 		public int Year { get; set; }
 
-		[StringLength(128)]
+		[StringLength(127)]
 		public string BankAccount { get; set; }
+
+		[MaxLength]
+		public byte[] ProfilePicture { get; set; }
+
+		public ICollection<Skill> Skills { get; set; }
 	}
 }

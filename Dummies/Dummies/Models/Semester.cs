@@ -12,9 +12,15 @@ namespace Dummies.Models
 	{
 		[Key]
 		[DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
-		public int Id { get; set; }
+		public int SemesterId { get; set; }
 
-		[Key]
 		public int SyncId { get; set; }
+
+		[StringLength(8)]
+		public string Season { get; set; }
+
+		public int StartYear { get; set; }
+
+		public int EndYear { get; set; }
 	}
 }

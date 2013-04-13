@@ -171,9 +171,12 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\BachelorProgrammes.cs" />
     <Compile Include="Models\Course.cs" />
+    <Compile Include="Models\DummiesContext.cs" />
+    <Compile Include="Models\DummiesContextInitializer.cs" />
     <Compile Include="Models\Semester.cs" />
     <Compile Include="Models\Skill.cs" />
     <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\StudentCourse.cs" />
     <Compile Include="Models\Teacher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

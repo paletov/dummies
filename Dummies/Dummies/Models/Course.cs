@@ -12,9 +12,8 @@ namespace Dummies.Models
 	{
 		[Key]
 		[DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
-		public int Id { get; set; }
+		public int CourseId { get; set; }
 
-		[Key]
 		public int SyncId { get; set; }
 
 		[StringLength(256)]
@@ -22,5 +21,19 @@ namespace Dummies.Models
 
 		[StringLength(8)]
 		public string Group { get; set; }
+
+		public double Credits { get; set; }
+
+		[StringLength(15)]
+		public string Semester { get; set; }
+
+		public int BachelorProgrammeId { get; set; }
+
+		[ForeignKey("BachelorProgrammeId")]
+		public BachelorProgramme BachelorProgramme { get; set; }
+
+		public int Year { get; set; }
+
+		public ICollection<Teacher> Teachers { get; set; }
 	}
 }
