@@ -17,12 +17,6 @@ namespace Dummies.Controllers
 
         public ActionResult Index()
         {
-            //---------------------------MOCKUP
-            if (WebSecurity.CurrentUserName == "bigboss")
-            {
-                return RedirectToAction("BusinessProfile");
-            }
-            //-----------------------------
             return View();
         }
 

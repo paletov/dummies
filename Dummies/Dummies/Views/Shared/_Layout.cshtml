@@ -28,7 +28,14 @@
             <div id="menubar">
                <ul id="menu">
                     <li>@Html.ActionLink("Начало", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Профил", "Index", "Student")</li>
+                    @if (WebSecurity.CurrentUserName == "bigboss")
+                    {
+                    <li>@Html.ActionLink("Профил", "BusinessProfile", "Student")</li>
+                    }
+                    else
+                    {
+                       <li>@Html.ActionLink("Профил", "Index", "Student")</li> 
+                    }
                     <li>@Html.ActionLink("Взети Предмети", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Любими предмети", "Index", "Home")</li>
                     @if (WebSecurity.CurrentUserName == "bigboss")

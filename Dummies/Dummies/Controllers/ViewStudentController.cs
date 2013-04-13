@@ -39,6 +39,18 @@ namespace Dummies.Controllers
             return View(students);
         }
 
+        public ActionResult Dummy()
+        {
+            List<Student> students = new List<Student>()
+            {
+                new Student()
+                {
+                    Name = "Dimo Uzunov"
+                },
+            };
+            return View(students);
+        }
+
         public ActionResult GoBack()
         {
             return View("Index");
