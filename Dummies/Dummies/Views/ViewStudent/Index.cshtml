@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<Dummies.Models.Student>
 
-<h2 class="StudentsHeader">Students</h2>
+<h2 class="students-header">Students</h2>
 
 <div>
     @{
@@ -10,8 +10,28 @@
     @grid.GetHtml(columns:grid.Columns(
     grid.Column(
         "Name",
-        format: @<text>@Html.ActionLink((string)item.Name, "ShowDetails", new { name = item.Name })</text>
-    )))
+        format: @<text>@Html.ActionLink((string)item.Name, "ShowDetails", new { name = item.Name })</text>,
+        style: "webgrid-column"
+        ),
+    grid.Column(
+        "Is Employed",
+        format: @<text>@Html.Label("IsEmployed", "No")</text>,
+        style: "webgrid-column"
+          
+    ),
+    grid.Column(
+        "Faculty Number",
+        format: @<text>@Html.Label("Faculty Number", "80518")</text>,
+        style: "webgrid-column"
+        
+        
+    )),
+    headerStyle: "webgrid-header",
+    rowStyle: "webgrid-row-style",
+    tableStyle: "webgrid",
+    selectedRowStyle: "webgrid-selected-row"
+    )
+    
 </div>
 
 <div id="StudentDetailsPartial">

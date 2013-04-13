@@ -39,5 +39,7 @@ namespace Dummies.Models
 		public byte[] ProfilePicture { get; set; }
 
 		public ICollection<Skill> Skills { get; set; }
-	}
+
+        public bool IsEmployed { get; set; }
+    }
 }
