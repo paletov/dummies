@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Search";
+}
+<script src="../../Content/js/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".addNewCourse").click(function () {
+            var coursesDiv = document.getElementById("courses");
+            var newDiv = document.createElement("div");
+            var newSpan = document.createElement("span");
+            newSpan.innerHTML = "Курс : ";
+            var newSelect = document.createElement("select");
+            var newOption = new Option("JavaEE", "JavaEE");
+            newSelect.appendChild(newOption);
+            newOption = new Option("Java", "Java");
+            newSelect.appendChild(newOption);
+            newOption = new Option("C++", "C++");
+            newSelect.appendChild(newOption);
+            newOption = new Option("C#", "C#");
+            newSelect.appendChild(newOption);
+            newSpan.appendChild(newSelect);
+            newDiv.appendChild(newSpan);
+            coursesDiv.appendChild(newDiv);
+        });
+    });
+</script>
+<div class="student-profile-info">
+    <h2>Търся: </h2>
+    <div>
+        <span>
+            Студенти с издържани курсове
+        </span>
+    </div>
+    <br />
+    <div id="courses">
+        <div>
+        <span>Курс :
+            <select>
+                <option value="JavaEE">JavaEE</option>
+                <option value="Java">Java</option>
+                <option value="C++">C++</option>
+                <option value="C#">C#</option>
+            </select>
+        </span>
+        <span>
+            <button class="addNewCourse">Добави още курсове + </button>
+        </span>
+        </div>
+    </div>
+    <div>
+        <button class="find">Намери</button>
+    </div>
+</div>

@@ -525,6 +525,15 @@ ul img {
     background-image: url("images/green-plus-sign-md-hover.png");
 }
 
+.find 
+{
+    margin-left : 75px;
+    text-align : center;
+    font-size : large;
+    height : 50px;
+    width : 100px;
+}
+
 /* login
 ----------------------------------------------------------*/
 #login {

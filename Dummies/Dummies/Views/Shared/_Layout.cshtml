@@ -15,14 +15,13 @@
 	            <div id="welcome">
 	              <h1>Dummies</h1>
 	            </div><!--close welcome-->
-                <div class="float-right">
-                    <section id="login">
-                        @Html.Partial("_LoginPartial")
-                    </section>
-		        </div>
+                
                 
 	            <div id="welcome_slogan">
 	              <h1>Най - добрите оферти за работа специално за Теб !</h1>
+                  <section id="login">
+                        @Html.Partial("_LoginPartial")
+                  </section>
 	            </div><!--close welcome_slogan-->
 	          </div><!--close banner-->
             </div><!--close header-->
@@ -32,13 +31,19 @@
                     <li>@Html.ActionLink("Профил", "Index", "Student")</li>
                     <li>@Html.ActionLink("Взети Предмети", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Любими предмети", "Index", "Home")</li>
+                    @if (WebSecurity.CurrentUserName == "bigboss")
+                    {
+                    <li>@Html.ActionLink("Търсене", "Search", "Student")</li>
+                    }
+                    else
+                    {
                     <li>@Html.ActionLink("Оферти", "About", "Home")</li>
+                    }
                     <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
                </ul>
             </div><!--close menubar-->
         </header>
         <div id="body">
-
         <main>
         <div id="site_content">	
         <div class="sidebar_container">
@@ -120,6 +125,6 @@
         </footer>
         @Scripts.Render("~/bundles/jquery")
         @RenderSection("scripts", required: false)
-    </body>
+        </body>
 </html>
 	

@@ -192,6 +192,7 @@
     <Content Include="Content\images\home_1.jpg" />
     <Content Include="Content\images\home_2.jpg" />
     <Content Include="Content\images\transparent.png" />
+    <Content Include="Content\images\java.jpg" />
     <Content Include="Content\js\image_slide.js" />
     <Content Include="Content\js\jquery.galleriffic.js" />
     <Content Include="Content\js\jquery.min.js" />
@@ -315,6 +316,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Student\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Student\BusinessProfile.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Student\JavaDeveloper.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Student\Search.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
