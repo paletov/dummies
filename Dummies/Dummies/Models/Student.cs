@@ -12,7 +12,7 @@ namespace Dummies.Models
 	{
 		[Key]
 		[DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
-		public int Id { get; set; }
+		public int StudentId { get; set; }
 
 		public int SyncId { get; set; }
 
