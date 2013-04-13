@@ -10,39 +10,108 @@
     </head>
     <body>
         <header>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("your logo here", "Index", "Home")</p>
-                </div>
-                <div class="float-right">
+            <div id="header">
+	            <div id="banner">
+	            <div id="welcome">
+	              <h1>Dummies</h1>
+	            </div><!--close welcome-->
+                <!--<div class="float-right">
                     <section id="login">
                         @Html.Partial("_LoginPartial")
                     </section>
-                    <nav>
-                        <ul id="menu">
-                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                            <li>@Html.ActionLink("About", "About", "Home")</li>
-                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
+		        </div>
+                -->
+	            <div id="welcome_slogan">
+	              <h1>Най - добрите оферти за работа специално за Теб !</h1>
+	            </div><!--close welcome_slogan-->
+	          </div><!--close banner-->
+            </div><!--close header-->
+            <div id="menubar">
+               <ul id="menu">
+                    <li>@Html.ActionLink("Начало", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Профил", "About", "Home")</li>
+                    <li>@Html.ActionLink("Взети Предмети", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Любими предмети", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Оферти", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+               </ul>
+            </div><!--close menubar-->
         </header>
         <div id="body">
+
+        <main>
+        <div id="site_content">	
+        <div class="sidebar_container">       
+		    <div class="sidebar">
+              <div class="sidebar_item">
+                <h2>Top 5 Позиции за теб</h2>
+                <p><li><a href="">1. Juniour .NET в Телерик</a></li></p>
+			    <p><li><a href="">2. Juniour Java в САП</a></li></p>
+			    <p><li><a href="">3. Juniour C++ някъде</a></li></p>
+			    <p><li><a href="">4. Juniour Java</a></li></p>
+			    <p><li><a href="">5. Juniour Java</a></li></p>
+              </div><!--close sidebar_item--> 
+            </div><!--close sidebar-->     		
+		    <div class="sidebar">
+              <div class="sidebar_item">
+                <h2>Последни обяви</h2>
+                <h3>Септември 2013</h3>
+                <p><li><a href="">Juniour C гейм разработчик</a></li></p>        
+		      </div><!--close sidebar_item--> 
+            </div><!--close sidebar-->
+		    <div class="sidebar">
+              <div class="sidebar_item">
+                <h3>Септември 2013</h3>
+                <p><li><a href="">Стажант в Google</a></li></p>         
+		      </div><!--close sidebar_item--> 
+            </div><!--close sidebar-->  
+		    <div class="sidebar">
+              <div class="sidebar_item">
+                <h3>Септември 2013</h3>
+                <p><li><a href="">Свободно място за QA в Astea</a></li></p>         
+		      </div><!--close sidebar_item--> 
+            </div><!--close sidebar-->  		
+        </div><!--close sidebar_container-->
             @RenderSection("featured", required: false)
             <section class="content-wrapper main-content clear-fix">
                 @RenderBody()
             </section>
+        </div><!--close site_content-->
+        </main>
         </div>
         <footer>
+            <div id="content_grey">
+	  <div class="content_grey_container_box">
+		<h4>Latest Blog Post</h4>
+	    <p> Phasellus laoreet feugiat risus. Ut tincidunt, ante vel fermentum iaculis.</p>
+		<div class="readmore">
+		  <a href="#">Read more</a>
+		</div><!--close readmore-->
+	  </div><!--close content_grey_container_box-->
+      <div class="content_grey_container_box">
+       <h4>Latest News</h4>
+	    <p> Phasellus laoreet feugiat risus. Ut tincidunt, ante vel fermentum iaculis.</p>
+	    <div class="readmore">
+		  <a href="#">Read more</a>
+		</div><!--close readmore-->
+	  </div><!--close content_grey_container_box-->
+      <div class="content_grey_container_boxl">
+		<h4>Latest Projects</h4>
+	    <p> Phasellus laoreet feugiat risus. Ut tincidunt, ante vel fermentum iaculis.</p>
+	    <div class="readmore">
+		  <a href="#">Read more</a>
+		</div><!--close readmore-->	  
+	  </div><!--close content_grey_container_box1-->      
+	  <br style="clear:both"/>
+    </div><!--close content_grey-->   
             <div class="content-wrapper">
                 <div class="float-left">
                     <p>&copy; @DateTime.Now.Year - My ASP.NET MVC Application</p>
                 </div>
             </div>
         </footer>
-
         @Scripts.Render("~/bundles/jquery")
         @RenderSection("scripts", required: false)
     </body>
 </html>
+	
