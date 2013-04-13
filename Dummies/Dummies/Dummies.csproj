@@ -179,6 +179,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\css\style.css" />
+    <Content Include="Content\images\green-plus-sign-md-hover.png" />
+    <Content Include="Content\images\green-plus-sign-md.png" />
     <Content Include="Content\images\content_image1.jpg" />
     <Content Include="Content\images\dimo-image.jpg" />
     <Content Include="Content\images\home_1.jpg" />
