@@ -67,9 +67,11 @@ ol
 ol li
 { margin: 0 0 11px 0;}
 
-#main, #header, #banner, #menubar, #site_content, #footer, #content_grey
-{ margin-left: auto; 
-  margin-right: auto;}
+#main, #header, #menubar, #banner, #site_content, #footer, #content_grey
+{ 
+  margin-left: auto; 
+  margin-right: auto;
+}
 
 #main
 { background: transparent;}
@@ -101,7 +103,8 @@ ol li
   -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
   -moz-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
-  } 
+  margin: 12px auto;
+} 
   
 #welcome
 { width: 880px;
@@ -525,6 +528,7 @@ ul img {
     background-image: url("images/green-plus-sign-md-hover.png");
 }
 
+
 .find 
 {
     margin-left : 75px;
@@ -534,6 +538,55 @@ ul img {
     width : 100px;
 }
 
+
+.webgrid 
+{
+    width: 60%;
+    border: 0px;
+    border-collapse: collapse;
+}
+
+.webgrid a 
+{       
+    color: #000;
+    vertical-align: central;
+}
+
+.webgrid-header 
+{
+    padding: 6px 5px;
+    text-align: center;
+    background-color: #e8eef4;
+    border-bottom: 2px solid;
+    height: 40px;
+
+    border-top: 2px solid #D6E8FF;
+    border-left: 2px solid #D6E8FF;
+    border-right: 2px solid #D6E8FF;
+}
+
+.webgrid-row-style 
+{
+    height: 30px;
+    border-bottom: 1px solid #d2d2d2;
+    border-left: 2px solid #D6E8FF;
+    border-right: 2px solid #D6E8FF;
+}
+
+.webgrid-selected-row 
+{
+    font-weight: bold;
+}
+
+.webgrid-column 
+{
+    text-align: center;
+}
+
+.students-header 
+{
+    text-align: center;
+}
 /* login
 ----------------------------------------------------------*/
 #login {
