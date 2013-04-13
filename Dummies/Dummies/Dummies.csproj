@@ -163,7 +163,6 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -175,7 +174,9 @@
     <Compile Include="Models\Contexts\DummiesContext.cs" />
     <Compile Include="Models\Contexts\DummiesContextInitializer.cs" />
     <Compile Include="Models\OpenPosition.cs" />
+    <Compile Include="Models\PersonalOffer.cs" />
     <Compile Include="Models\PositionType.cs" />
+    <Compile Include="Models\Repos\PersonalOfferRepository.cs" />
     <Compile Include="Models\Repos\PositionTypeRepository.cs" />
     <Compile Include="Models\Repos\OpenPosition.cs" />
     <Compile Include="Models\Repos\BusinessRepository.cs" />
@@ -321,6 +322,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Student\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Student\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Student\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Student\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Student\Delete.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

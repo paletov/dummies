@@ -20,6 +20,7 @@ namespace Dummies.Models.Contexts
 		public DbSet<Business> Businesses { get; set; }
 		public DbSet<OpenPosition> OpenPositions { get; set; }
 		public DbSet<PositionType> PositionTypes { get; set; }
+		public DbSet<PersonalOffer> PersonalOffers { get; set; }
 
 		public DummiesContext()
 			: base("DefaultConnection")

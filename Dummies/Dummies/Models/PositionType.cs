@@ -14,5 +14,7 @@ namespace Dummies.Models
 
 		[StringLength(255)]
 		public string Name { get; set; }
+
+		public ICollection<OpenPosition> Positions { get; set; }
 	}
 }
