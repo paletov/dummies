@@ -10,6 +10,7 @@ using Microsoft.Web.WebPages.OAuth;
 using WebMatrix.WebData;
 using Dummies.Filters;
 using Dummies.Models;
+using Dummies.Models.Contexts;
 
 namespace Dummies.Controllers
 {

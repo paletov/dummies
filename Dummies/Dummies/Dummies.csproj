@@ -170,9 +170,15 @@
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\BachelorProgrammes.cs" />
+    <Compile Include="Models\Business.cs" />
     <Compile Include="Models\Course.cs" />
-    <Compile Include="Models\DummiesContext.cs" />
-    <Compile Include="Models\DummiesContextInitializer.cs" />
+    <Compile Include="Models\Contexts\DummiesContext.cs" />
+    <Compile Include="Models\Contexts\DummiesContextInitializer.cs" />
+    <Compile Include="Models\OpenPosition.cs" />
+    <Compile Include="Models\PositionType.cs" />
+    <Compile Include="Models\Repos\PositionTypeRepository.cs" />
+    <Compile Include="Models\Repos\OpenPosition.cs" />
+    <Compile Include="Models\Repos\BusinessRepository.cs" />
     <Compile Include="Models\Repos\CourseRepository.cs" />
     <Compile Include="Models\Repos\SkillRepository.cs" />
     <Compile Include="Models\Repos\StudentRepository.cs" />

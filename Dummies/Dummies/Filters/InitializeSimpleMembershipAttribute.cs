@@ -5,6 +5,7 @@ using System.Threading;
 using System.Web.Mvc;
 using WebMatrix.WebData;
 using Dummies.Models;
+using Dummies.Models.Contexts;
 
 namespace Dummies.Filters
 {

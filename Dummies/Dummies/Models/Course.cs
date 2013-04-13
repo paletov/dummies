@@ -35,5 +35,7 @@ namespace Dummies.Models
 		public int Year { get; set; }
 
 		public ICollection<Teacher> Teachers { get; set; }
+
+		public ICollection<OpenPosition> OpenPositions { get; set; }
 	}
 }

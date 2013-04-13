@@ -7,16 +7,12 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Dummies.Models
 {
-	[Table("BachelorProgramme")]
-	public class BachelorProgramme
+	[Table("PositionType")]
+	public class PositionType
 	{
-		[Key]
-		[DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
-		public int BachelorProgrammeId { get; set; }
+		public int PositionTypeId { get; set; }
 
-		public int SyncId { get; set; }
-
-		[StringLength(256)]
+		[StringLength(255)]
 		public string Name { get; set; }
 	}
 }
