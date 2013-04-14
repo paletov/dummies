@@ -128,6 +128,11 @@ ol li
   text-shadow: 1px 1px #fff;
   color: #1D1D1D;}
 
+#registerLink:hover, #loginLink:hover 
+{
+    background-color: lightblue;
+}
+
 #welcome_slogan H1
 { font: normal 200% Arial, Helvetica, sans-serif;
   letter-spacing: -2px;
