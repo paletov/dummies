@@ -162,7 +162,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OpenPositionController.cs" />
+    <Compile Include="Controllers\PersonalOfferController.cs" />
+    <Compile Include="Controllers\StudentProfileController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -176,10 +180,13 @@
     <Compile Include="Models\PersonalOffer.cs" />
     <Compile Include="Models\PositionType.cs" />
     <Compile Include="Models\Repos\BachelorProgrammeRepository.cs" />
+    <Compile Include="Models\Repos\UserProfileRepository.cs" />
+    <Compile Include="Models\Repos\StudentCourseRepository.cs" />
+    <Compile Include="Models\Repos\StudentProfileRepository.cs" />
     <Compile Include="Models\Repos\SemesterRepository.cs" />
     <Compile Include="Models\Repos\PersonalOfferRepository.cs" />
     <Compile Include="Models\Repos\PositionTypeRepository.cs" />
-    <Compile Include="Models\Repos\OpenPosition.cs" />
+    <Compile Include="Models\Repos\OpenPositionRepository.cs" />
     <Compile Include="Models\Repos\CourseRepository.cs" />
     <Compile Include="Models\Repos\SkillRepository.cs" />
     <Compile Include="Models\Semester.cs" />
@@ -332,6 +339,66 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Student\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\StudentProfile\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\StudentProfile\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\StudentProfile\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\StudentProfile\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\StudentProfile\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\OpenPosition\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\OpenPosition\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\OpenPosition\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\OpenPosition\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\OpenPosition\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\PersonalOffer\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\PersonalOffer\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\PersonalOffer\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\PersonalOffer\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\PersonalOffer\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Course\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Course\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Course\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Course\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Course\Delete.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -7,6 +7,8 @@ using System.Web.Security;
 using WebMatrix.WebData;
 using Dummies.Models.Repos;
 using Dummies.Models;
+using System.Diagnostics;
+using System.IO;
 
 namespace Dummies.Migrations
 {
@@ -22,13 +24,23 @@ namespace Dummies.Migrations
 			WebSecurity.InitializeDatabaseConnection("DefaultConnection",
 				"UserProfile", "UserId", "UserName", autoCreateTables: true);
 
-			SeedRolesAndUsers();
 			SeedSemesters();
 			SeedBachelorProgrammes();
 			SeedCourses();
+
+			SeedRolesAndUsers();
 		}
 
 		private void SeedRolesAndUsers()
+		{
+			SeedStudent("ProgramistJavarov", "1ProgramistJavarov1", "88888", 1, 6);
+			SeedStudent("ProgramistLeshperkov", "1ProgramistLeshperkov1", "77777", 6, 10);
+			SeedStudent("ProgramistChoo", "1ProgramistChoo1", "66666", 12, 19);
+
+			SeedBusiness("TheBigBoss", "1TheBigBoss1");
+		}
+
+		private void SeedStudent(string username, string password, string facultyNumber, int fromCourse, int toCourse)
 		{
 			var roles = (SimpleRoleProvider)Roles.Provider;
 			var membership = (SimpleMembershipProvider)Membership.Provider;
@@ -36,32 +48,60 @@ namespace Dummies.Migrations
 			if (!roles.RoleExists("Student"))
 			{
 				roles.CreateRole("Student");
-
-				//if (membership.GetUser("Rumen", false) == null)
-				//{
-				//    membership.CreateUserAndAccount("Rumen", "Rumen1234");
-
-				//    using (StudentProfileRepository repository = new StudentProfileRepository())
-				//    {
-				//        StudentProfile profile = new StudentProfile()
-				//        {
-				//            FacultyNumber = 80555
-				//        }
-				//    }
-				//}
 			}
-			if (!roles.RoleExists("Bussines"))
+
+			if (membership.GetUser(username, false) == null)
 			{
-				roles.CreateRole("Bussines");
+				string token = membership.CreateUserAndAccount(username, password);
+				membership.ConfirmAccount(token);
+				int userId = membership.GetUserId(username);
+
+				int? studentProfileId = null;
+				using (StudentProfileRepository repository = new StudentProfileRepository())
+				{
+					StudentProfile profile = new StudentProfile(userId, facultyNumber, 1);
+					repository.InsertOrUpdate(profile);
+					repository.Save();
+
+					studentProfileId = repository.FindByFacultyNumber(facultyNumber).StudentProfileId;
+				}
+				using (StudentCourseRepository repository = new StudentCourseRepository())
+				{
+					for (int i = fromCourse; i <= toCourse; i++)
+					{
+						StudentCourse studentCourse = new StudentCourse((int)studentProfileId, i);
+						repository.InsertOrUpdate(studentCourse);
+					}
+					repository.Save();
+				}
 			}
-			//if (membership.GetUser("sallen", false) == null)
-			//{
-			//    membership.CreateUserAndAccount("sallen", "imalittleteapot");
-			//}
-			//if (!roles.GetRolesForUser("sallen").Contains("Admin"))
-			//{
-			//    roles.AddUsersToRoles(new[] { "sallen" }, new[] { "admin" });
-			//}
+
+			if (!roles.GetRolesForUser(username).Contains("Student"))
+			{
+				roles.AddUsersToRoles(new[] { username }, new[] { "Student" });
+			}
+		}
+
+		private void SeedBusiness(string username, string password)
+		{
+			var roles = (SimpleRoleProvider)Roles.Provider;
+			var membership = (SimpleMembershipProvider)Membership.Provider;
+
+			if (!roles.RoleExists("Business"))
+			{
+				roles.CreateRole("Business");
+			}
+
+			if (membership.GetUser(username, false) == null)
+			{
+				string token = membership.CreateUserAndAccount(username, password);
+				membership.ConfirmAccount(token);
+			}
+
+			if (!roles.GetRolesForUser(username).Contains("Business"))
+			{
+				roles.AddUsersToRoles(new[] { username }, new[] { "Business" });
+			}
 		}
 
 		private void SeedSemesters()

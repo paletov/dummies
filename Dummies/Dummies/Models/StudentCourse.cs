@@ -12,12 +12,12 @@ namespace Dummies.Models
 	{
 		[Key]
 		[DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
-		public int Id { get; set; }
+		public int StudentCourseId { get; set; }
 
-		public int StudentId { get; set; }
+		public int StudentProfileId { get; set; }
 
-		[ForeignKey("StudentId")]
-		public StudentProfile Student { get; set; }
+		[ForeignKey("StudentProfileId")]
+		public StudentProfile StudentProfile { get; set; }
 
 		public int CourseId { get; set; }
 
@@ -27,5 +27,11 @@ namespace Dummies.Models
 		public int Order { get; set; }
 
 		public double Rating { get; set; }
+
+		public StudentCourse(int studentProfileId, int courseId)
+		{
+			StudentProfileId = studentProfileId;
+			CourseId = courseId;
+		}
 	}
 }

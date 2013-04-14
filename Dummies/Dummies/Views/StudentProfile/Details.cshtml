@@ -1,0 +1,43 @@
+﻿@model Dummies.Models.StudentProfile
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>StudentProfile</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UserProfile.UserName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserProfile.UserName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FacultyNumber)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FacultyNumber)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Semester.Season)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Semester.Season)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Year)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Year)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.StudentProfileId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

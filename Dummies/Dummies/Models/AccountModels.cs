@@ -40,11 +40,6 @@ namespace Dummies.Models
 
 		[MaxLength]
 		public byte[] ProfilePicture { get; set; }
-
-		public int? StudentProfileId { get; set; }
-
-		[ForeignKey("StudentProfileId")]
-		public StudentProfile StudentProfile { get; set; }
 	}
 
 	public class RegisterExternalLoginModel

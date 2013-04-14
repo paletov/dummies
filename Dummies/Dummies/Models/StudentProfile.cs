@@ -10,7 +10,7 @@ namespace Dummies.Models
 	[Table("StudentProfile")]
 	public class StudentProfile
 	{
-		[Key, ForeignKey("UserProfile")]
+		[Key]
 		[DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
 		public int StudentProfileId { get; set; }
 
@@ -30,9 +30,15 @@ namespace Dummies.Models
 
 		public ICollection<Skill> Skills { get; set; }
 
-		public StudentProfile(string facultyNumber)
+		public StudentProfile()
 		{
+		}
+
+		public StudentProfile(int userId, string facultyNumber, int semesterId)
+		{
+			UserId = userId;
 			FacultyNumber = facultyNumber;
+			SemesterId = semesterId;
 		}
 	}
 }

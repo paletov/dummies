@@ -18,7 +18,7 @@ namespace Dummies.Models.Repos
 			return context.StudentProfiles.Where(c => c.StudentProfileId == studentProfileId);
 		}
 
-		public IQueryable<StudentProfile> AllByStudentProfileIdIncluding(int semesterId, params Expression<Func<StudentProfile, object>>[] includeProperties)
+		public IQueryable<StudentProfile> AllByStudentProfileIdIncluding(int studentProfileId, params Expression<Func<StudentProfile, object>>[] includeProperties)
 		{
 			IQueryable<StudentProfile> query = context.StudentProfiles.Where(c => c.StudentProfileId == studentProfileId);
 			foreach (var includeProperty in includeProperties)
@@ -33,9 +33,14 @@ namespace Dummies.Models.Repos
 			return context.StudentProfiles.Find(id);
 		}
 
+		public StudentProfile FindByFacultyNumber(string facultyNumber)
+		{
+			return context.StudentProfiles.FirstOrDefault(sp => sp.FacultyNumber == facultyNumber);
+		}
+
 		public void InsertOrUpdate(StudentProfile studentProfile)
 		{
-			if (studentProfile.SemesterId == default(int))
+			if (studentProfile.StudentProfileId == default(int))
 			{
 				// New entity
 				context.StudentProfiles.Add(studentProfile);
@@ -67,8 +72,9 @@ namespace Dummies.Models.Repos
 	public interface IStudentProfileRepository : IDisposable
 	{
 		IQueryable<StudentProfile> AllByStudentProfileId(int studentProfileId);
-		IQueryable<StudentProfile> AllByStudentProfileIdIncluding(int semesterId, params Expression<Func<StudentProfile, object>>[] includeProperties);
+		IQueryable<StudentProfile> AllByStudentProfileIdIncluding(int studentProfileId, params Expression<Func<StudentProfile, object>>[] includeProperties);
 		StudentProfile Find(int id);
+		StudentProfile FindByFacultyNumber(string facultyNumber);
 		void InsertOrUpdate(StudentProfile studentProfile);
 		void Delete(int id);
 		void Save();
