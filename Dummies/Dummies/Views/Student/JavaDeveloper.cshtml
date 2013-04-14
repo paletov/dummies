@@ -3,14 +3,12 @@
 }
 
 <div class="student-profile-info">
-        <h2>Java Developer</h2>
+        <h2>Java Developer в @Html.ActionLink("Dummies Pro Solutions (DPS)", "BusinessProfile", "Student")</h2>
 
         <h1>Тъсим си Java Developer с издържани Java EE и Java</h1>
         <p>* Main responsibilities:
 - Implementation of components according project requirement
 - Technical requirements analysis, design preparation
-- Participating in design and architecture discussions
-- Assessment of new, cutting age technologies
 - Unit and Integration testing/Test automation</p>
 <p>* Requirements:
 - Bachelor or Master degree in IT field or similar
@@ -18,6 +16,12 @@
 - Strong knowledge in Java & Java Enterprise technologies, Java Script
 - Knowledge in Java design patterns, algorithms and data structures
 - Knowledge in software development lifecycle
-- Good communication skills
 - Fluent English language</p>
+
+                    @if (WebSecurity.CurrentUserName == "student")
+                    {
+                    <div>
+                        <button class="dummyButton">Кандидатствай</button>
+                    </div>
+                    }
 </div>

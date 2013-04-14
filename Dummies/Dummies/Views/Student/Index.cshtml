@@ -19,6 +19,12 @@
                     <p>Интересувам се от .......</p>
                     <p>Търся си................</p>
                     <p>Предлагам..............</p>
+                    @if (WebSecurity.CurrentUserName == "bigboss")
+                    {
+                    <div>
+                        <button class="dummyButton">Покани на работа</button>
+                    </div>
+                    }
                 </div>
             </div>
         </div>

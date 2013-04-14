@@ -587,6 +587,11 @@ ul img {
 {
     text-align: center;
 }
+
+.dummyButton
+{
+    height : 40px;
+}
 /* login
 ----------------------------------------------------------*/
 #login {
