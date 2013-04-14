@@ -46,7 +46,7 @@ namespace Dummies.Controllers
             {
                 new Student()
                 {
-                    Name = "Dimo Uzunov"
+                    Name = "Програмист Джаваров"
                 },
             };
             return View(students);

@@ -3,7 +3,36 @@
 }
 
 <script src="../../Content/js/jquery.min.js"></script>
-
+<script src="../../Content/js/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        idNumber = 1;
+        $(".addNewCourse").click(function () {
+            var coursesDiv = document.getElementById("courses");
+            var newDiv = document.createElement("div");
+            var newSpan = document.createElement("span");
+            newSpan.innerHTML = "Курс : ";
+            var newSelect = document.createElement("select");
+            newSelect.setAttribute("id", "select" + idNumber);
+            idNumber++;
+            var newOption = new Option("Приложна математика", "Приложна математика");
+            newSelect.appendChild(newOption);
+            newOption = new Option("Статистика практикум", "Статистика практикум");
+            newSelect.appendChild(newOption);
+            newOption = new Option("ДАА практикум", "ДАА практикум");
+            newSelect.appendChild(newOption);
+            newOption = new Option("Многоплатформени мобилни приложения", "Многоплатформени мобилни приложения");
+            newSelect.appendChild(newOption);
+            newOption = new Option("Java EE", "Java EE");
+            newSelect.appendChild(newOption);
+            newOption = new Option("Java", "Java");
+            newSelect.appendChild(newOption);
+            newSpan.appendChild(newSelect);
+            newDiv.appendChild(newSpan);
+            coursesDiv.appendChild(newDiv);
+        });
+});
+</script>
 <div class="student-profile-info">
     <h2>Търся: </h2>
     <div>
