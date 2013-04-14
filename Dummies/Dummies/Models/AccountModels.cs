@@ -25,7 +25,26 @@ namespace Dummies.Models
 		[Key]
 		[DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
 		public int UserId { get; set; }
+
 		public string UserName { get; set; }
+
+		[StringLength(127)]
+		public string FullName { get; set; }
+
+		[DataType(DataType.MultilineText)]
+		public string Description { get; set; }
+
+		[StringLength(255)]
+		[DataType(DataType.EmailAddress)]
+		public string Email { get; set; }
+
+		[MaxLength]
+		public byte[] ProfilePicture { get; set; }
+
+		public int? StudentProfileId { get; set; }
+
+		[ForeignKey("StudentProfileId")]
+		public StudentProfile StudentProfile { get; set; }
 	}
 
 	public class RegisterExternalLoginModel

@@ -20,10 +20,10 @@ namespace Dummies.Models
 		[DataType(DataType.MultilineText)]
 		public string Description { get; set; }
 
-		public int BusinessId { get; set; }
+		public int BusinessUserId { get; set; }
 
-		[ForeignKey("BusinessId")]
-		public Business Business { get; set; }
+		[ForeignKey("BusinessUserId")]
+		public UserProfile BusinessUser { get; set; }
 
 		public int PositionTypeId { get; set; }
 
@@ -33,6 +33,6 @@ namespace Dummies.Models
 		public int StudentId { get; set; }
 
 		[ForeignKey("StudentId")]
-		public Student Student { get; set; }
+		public StudentProfile Student { get; set; }
 	}
 }

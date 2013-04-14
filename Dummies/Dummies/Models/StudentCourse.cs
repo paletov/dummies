@@ -17,14 +17,12 @@ namespace Dummies.Models
 		public int StudentId { get; set; }
 
 		[ForeignKey("StudentId")]
-		public Student Student { get; set; }
+		public StudentProfile Student { get; set; }
 
 		public int CourseId { get; set; }
 
 		[ForeignKey("CourseId")]
 		public Course Course { get; set; }
-
-		public bool IsTaken { get; set; }
 
 		public int Order { get; set; }
 

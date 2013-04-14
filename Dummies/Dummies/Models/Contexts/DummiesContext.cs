@@ -10,14 +10,12 @@ namespace Dummies.Models.Contexts
 	public class DummiesContext : DbContext
 	{
 		public DbSet<UserProfile> UserProfiles { get; set; }
-		public DbSet<Student> Students { get; set; }
+		public DbSet<StudentProfile> StudentProfiles { get; set; }
 		public DbSet<Course> Courses { get; set; }
-		public DbSet<Teacher> Teachers { get; set; }
 		public DbSet<Skill> Skills { get; set; }
 		public DbSet<BachelorProgramme> BachelorProgrammes { get; set; }
 		public DbSet<Semester> Semesters { get; set; }
 		public DbSet<StudentCourse> StudentCourseRelations { get; set; }
-		public DbSet<Business> Businesses { get; set; }
 		public DbSet<OpenPosition> OpenPositions { get; set; }
 		public DbSet<PositionType> PositionTypes { get; set; }
 		public DbSet<PersonalOffer> PersonalOffers { get; set; }

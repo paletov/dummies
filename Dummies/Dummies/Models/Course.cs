@@ -14,8 +14,6 @@ namespace Dummies.Models
 		[DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
 		public int CourseId { get; set; }
 
-		public int SyncId { get; set; }
-
 		[StringLength(256)]
 		public string Name { get; set; }
 
@@ -34,8 +32,16 @@ namespace Dummies.Models
 
 		public int Year { get; set; }
 
-		public ICollection<Teacher> Teachers { get; set; }
-
 		public ICollection<OpenPosition> OpenPositions { get; set; }
+
+		public Course(string name, string group, double credits, string semester, int bachelorProgrammeId, int year)
+		{
+			Name = name;
+			Group = group;
+			Credits = credits;
+			Semester = semester;
+			BachelorProgrammeId = bachelorProgrammeId;
+			Year = year;
+		}
 	}
 }

@@ -14,9 +14,12 @@ namespace Dummies.Models
 		[DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
 		public int BachelorProgrammeId { get; set; }
 
-		public int SyncId { get; set; }
-
 		[StringLength(256)]
 		public string Name { get; set; }
+
+		public BachelorProgramme(string name)
+		{
+			Name = name;
+		}
 	}
 }

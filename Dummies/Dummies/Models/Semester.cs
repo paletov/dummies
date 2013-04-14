@@ -14,13 +14,18 @@ namespace Dummies.Models
 		[DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
 		public int SemesterId { get; set; }
 
-		public int SyncId { get; set; }
-
 		[StringLength(8)]
 		public string Season { get; set; }
 
 		public int StartYear { get; set; }
 
 		public int EndYear { get; set; }
+
+		public Semester(string season, int startYear, int endYear)
+		{
+			Season = season;
+			StartYear = startYear;
+			EndYear = endYear;
+		}
 	}
 }

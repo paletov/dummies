@@ -7,23 +7,19 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Dummies.Models
 {
-	[Table("Student")]
-	public class Student
+	[Table("StudentProfile")]
+	public class StudentProfile
 	{
-		[Key]
+		[Key, ForeignKey("UserProfile")]
 		[DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
-		public int StudentId { get; set; }
+		public int StudentProfileId { get; set; }
 
-		public int SyncId { get; set; }
+		public int UserId { get; set; }
 
-		public int FacultyNumber { get; set; }
+		[ForeignKey("UserId")]
+		public UserProfile UserProfile { get; set; }
 
-		[StringLength(127)]
-		public string Name { get; set; }
-
-		[StringLength(255)]
-		[DataType(DataType.EmailAddress)]
-		public string Email { get; set; }
+		public string FacultyNumber { get; set; }
 
 		public int SemesterId { get; set; }
 
@@ -32,12 +28,11 @@ namespace Dummies.Models
 
 		public int Year { get; set; }
 
-		[StringLength(127)]
-		public string BankAccount { get; set; }
-
-		[MaxLength]
-		public byte[] ProfilePicture { get; set; }
-
 		public ICollection<Skill> Skills { get; set; }
+
+		public StudentProfile(string facultyNumber)
+		{
+			FacultyNumber = facultyNumber;
+		}
 	}
 }
