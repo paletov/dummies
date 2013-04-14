@@ -39,6 +39,7 @@ namespace Dummies.Controllers
             return View(students);
         }
 
+        /*----------------- MOCKUP------------------------*/
         public ActionResult Dummy()
         {
             List<Student> students = new List<Student>()
@@ -51,6 +52,19 @@ namespace Dummies.Controllers
             return View(students);
         }
 
+        public ActionResult DummyOffers()
+        {
+            List<Student> students = new List<Student>()
+            {
+                new Student()
+                {
+                    Name = "Dummies Pro Solutions"
+                },
+            };
+            return View(students);
+        }
+
+        //---------------------------------------------
         public ActionResult GoBack()
         {
             return View("Index");

@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "SearchOffers";
+}
+
+<script src="../../Content/js/jquery.min.js"></script>
+
+<div class="student-profile-info">
+    <h2>Търся: </h2>
+    <div>
+        <span>
+            Оферти свързани с издържани курсове
+        </span>
+    </div>
+    <br />
+    <div id="courses">
+        <div class="selectDiv0">
+        <span>Курс :
+            <select id="select0">
+                <option value="Приложна математика">Приложна математика</option>
+                <option value="Статистика практикум">Статистика практикум</option>
+                <option value="ДАА практикум">ДАА практикум</option>
+                <option value="Многоплатформени мобилни приложения">Многоплатформени мобилни приложения</option>
+                <option value="Java EE">Java EE</option>
+                <option value="Java">Java</option>
+            </select>
+        </span>
+        <span>
+            <button class="addNewCourse">Добави още курсове + </button>
+        </span>
+        </div>
+    </div>
+    <div>
+        <button class="find">@Html.ActionLink("Намери", "DummyOffers", "ViewStudent")</button>
+    </div>
+</div>

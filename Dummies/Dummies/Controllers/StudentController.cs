@@ -35,6 +35,11 @@ namespace Dummies.Controllers
         {
             return View();
         }
+
+        public ActionResult SearchOffers()
+        {
+            return View();
+        }
         //----------------------------------
 
 

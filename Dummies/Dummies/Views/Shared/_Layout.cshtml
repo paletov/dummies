@@ -34,19 +34,19 @@
                     }
                     else
                     {
-                       <li>@Html.ActionLink("Профил", "Index", "Student")</li> 
+                       <li>@Html.ActionLink("Профил", "Index", "Student")</li>
+                       <li>@Html.ActionLink("Взети Предмети", "Contact", "Home")</li>
+                       <li>@Html.ActionLink("Любими предмети", "Index", "Home")</li> 
                     }
-                    <li>@Html.ActionLink("Взети Предмети", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Любими предмети", "Index", "Home")</li>
+                    
                     @if (WebSecurity.CurrentUserName == "bigboss")
                     {
                     <li>@Html.ActionLink("Търсене", "Search", "Student")</li>
                     }
                     else
                     {
-                    <li>@Html.ActionLink("Оферти", "About", "Home")</li>
+                    <li>@Html.ActionLink("Оферти", "SearchOffers", "Student")</li>
                     }
-                    <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
                </ul>
             </div><!--close menubar-->
         </header>
@@ -124,11 +124,6 @@
 	  </div><!--close content_grey_container_box1-->      
 	  <br style="clear:both"/>
     </div><!--close content_grey-->   
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - My ASP.NET MVC Application</p>
-                </div>
-            </div>
         </footer>
         @Scripts.Render("~/bundles/jquery")
         @RenderSection("scripts", required: false)
